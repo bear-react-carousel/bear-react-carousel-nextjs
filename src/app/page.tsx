@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import styles from './page.module.css'
+import MyCarousel from '@/components/MyCarousel';
 
 export default function Home() {
   return (
@@ -28,17 +29,19 @@ export default function Home() {
         </div>
       </div>
 
-      <div className={styles.center}>
+      <div className={styles.center} style={{fontSize: '45px'}}>
         <Image
-          className={styles.logo}
-          src="/next.svg"
+          src="/logo.svg"
           alt="Next.js Logo"
-          width={180}
-          height={37}
+          width={80}
+          height={80}
           priority
+          style={{marginRight: '10px'}}
         />
+        Bear React Carousel + NextJS
       </div>
 
+      <MyCarousel/>
       <div className={styles.grid}>
         <a
           href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
