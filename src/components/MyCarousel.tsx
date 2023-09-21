@@ -4,7 +4,7 @@ import BearCarousel, {BearSlideCard, IBearSlideItemData} from 'bear-react-carous
 import "bear-react-carousel/dist/index.css";
 
 const MyCarousel = () => {
-    const images: IBearSlideItemData = [
+    const images = [
         { id: 1, imageUrl: "/sample/01.webp" },
         { id: 2, imageUrl: "/sample/02.webp" },
         { id: 3, imageUrl: "/sample/03.webp" },
@@ -13,7 +13,7 @@ const MyCarousel = () => {
         { id: 6, imageUrl: "/sample/06.webp" }
     ];
 
-    const bearSlideItemData = images.map((row) => {
+    const bearSlideItemData: IBearSlideItemData[] = images.map((row) => {
         return {
             key: row.id,
             children: <BearSlideCard bgSize="100%" bgUrl={row.imageUrl} />
