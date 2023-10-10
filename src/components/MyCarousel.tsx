@@ -1,7 +1,8 @@
 'use client'
 
-import BearCarousel, {BearSlideCard, IBearSlideItemData} from 'bear-react-carousel';
+import BearCarousel, {BearSlideCard, IBearSlideItemData, TBearSlideItemDataList} from 'bear-react-carousel';
 import "bear-react-carousel/dist/index.css";
+import {useCallback} from 'react';
 
 const MyCarousel = () => {
     const images = [
@@ -20,7 +21,47 @@ const MyCarousel = () => {
         };
     });
 
-    return <BearCarousel data={bearSlideItemData} height="400px" />;
+
+    const slideData = useCallback(() => {
+        const dataList = [
+            {id: 1, imageUrl: '/responsive/01.webp', desc: 'Blueberry'},
+            {id: 2, imageUrl: '/responsive/02.webp', desc: 'berry'},
+            {id: 3, imageUrl: '/responsive/03.webp', desc: 'aam'},
+        ]
+
+        const bearSlideItemData: IBearSlideItemData[] = dataList.map(row => {
+            return {
+                key: row.id,
+                children: <BearSlideCard>
+                    <img src={row.imageUrl} style={{
+                        borderRadius: '0.5rem',
+                        height: '200px',
+                        width: '100%',
+                        backgroundColor: '#bdbdbd'
+                    }}/>
+                </BearSlideCard>
+            };
+        });
+        return bearSlideItemData;
+    }, []);
+
+
+    return <BearCarousel
+        className="d-lg-none"
+        data={slideData()}
+        height="auto"
+        slidesPerView={1}
+        isEnableNavButton
+        isEnablePagination
+        isEnableLoop
+        isLazy
+        breakpoints={{
+            768: {
+                slidesPerView: 3,
+                isEnablePagination: false
+            }
+        }}
+    />;
 }
 
 export default MyCarousel;
