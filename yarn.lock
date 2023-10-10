@@ -402,10 +402,10 @@ balanced-match@^1.0.0:
   resolved "https://registry.yarnpkg.com/balanced-match/-/balanced-match-1.0.2.tgz#e83e3a7e3f300b34cb9d87f615fa0cbf357690ee"
   integrity sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw==
 
-bear-react-carousel@4.0.17:
-  version "4.0.17"
-  resolved "https://registry.yarnpkg.com/bear-react-carousel/-/bear-react-carousel-4.0.17.tgz#19ac18a42745e49fed9a50c9be592434191222a6"
-  integrity sha512-8qiMXHoYfspMOFy+FH1/dek0O1mA6x3SoZF3MPo3SErpo/dlJkOvCrbVuVz/M8TydYTelsFC3jNpWurtgJk56Q==
+bear-react-carousel@4.0.18-alpha.0:
+  version "4.0.18-alpha.0"
+  resolved "https://registry.yarnpkg.com/bear-react-carousel/-/bear-react-carousel-4.0.18-alpha.0.tgz#d9522b08321d12c1b87d411a3a568456d0ee6b4f"
+  integrity sha512-WKVKKFiJ8uZiqi2hCWfC4Lzj+Fyvl6t/UpyrFlz592jnSqlE4IEs/EWy8eOsCu7eqFxIJDxKLIDfhBt803Qv4Q==
 
 brace-expansion@^1.1.7:
   version "1.1.11"

@@ -29,7 +29,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className={styles.center} style={{fontSize: '45px'}}>
+      <div className={styles.center} style={{fontSize: '45px', marginBottom: '200px'}}>
         <Image
           src="/logo.svg"
           alt="Next.js Logo"

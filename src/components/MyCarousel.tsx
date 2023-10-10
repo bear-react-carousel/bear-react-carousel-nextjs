@@ -1,6 +1,6 @@
 'use client'
 
-import BearCarousel, {BearSlideCard, IBearSlideItemData, TBearSlideItemDataList} from 'bear-react-carousel';
+import BearCarousel, {BearSlideCard, IBearSlideItemData, BearSlideImage} from 'bear-react-carousel';
 import "bear-react-carousel/dist/index.css";
 import {useCallback} from 'react';
 
@@ -32,14 +32,7 @@ const MyCarousel = () => {
         const bearSlideItemData: IBearSlideItemData[] = dataList.map(row => {
             return {
                 key: row.id,
-                children: <BearSlideCard>
-                    <img src={row.imageUrl} style={{
-                        borderRadius: '0.5rem',
-                        height: '200px',
-                        width: '100%',
-                        backgroundColor: '#bdbdbd'
-                    }}/>
-                </BearSlideCard>
+                children: <BearSlideImage imageUrl={row.imageUrl}/>,
             };
         });
         return bearSlideItemData;
@@ -47,18 +40,19 @@ const MyCarousel = () => {
 
 
     return <BearCarousel
-        className="d-lg-none"
         data={slideData()}
         height="auto"
         slidesPerView={1}
-        isEnableNavButton
+        isEnableNavButton={false}
         isEnablePagination
         isEnableLoop
         isLazy
+        // isDebug
         breakpoints={{
             768: {
                 slidesPerView: 3,
-                isEnablePagination: false
+                isEnablePagination: false,
+                isEnableNavButton: true,
             }
         }}
     />;
