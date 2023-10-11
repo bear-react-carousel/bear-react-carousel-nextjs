@@ -1,3 +1,5 @@
+'use client'
+
 import BearCarousel, {BearSlideCard, IBearSlideItemData, BearSlideImage} from 'bear-react-carousel';
 import "bear-react-carousel/dist/index.css";
 import {useCallback} from 'react';
